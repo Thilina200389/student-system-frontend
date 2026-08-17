@@ -237,8 +237,8 @@
 </div>
 
 <script>
-    // Railway Backend URL එක මෙතන හරියටම සෙට් කරලා තියෙන්නේ
-    const API_BASE_URL = 'https://student-system-frontend-eta.vercel.app/';
+    // ⚠️ මෙන්න මෙතනට Railway Backend එකේ ලින්කුව හරියටම දාන්න (අන්තිමට slash '/' දාන්න එපා)
+    const API_BASE_URL = 'https://student-system-backend-production.up.railway.app';
 
     // Toast Notification function eka
     function showToast(message, isError = false) {
@@ -322,7 +322,7 @@
         }
     });
 
-    // UPDATE: Edit button eka obuwama form ekata data tika genna (Bug එක හැදුවා)
+    // UPDATE: Edit button eka obuwama form ekata data tika genna
     function editStudent(id, name, age, grade) {
         document.getElementById('studentId').value = id;
         document.getElementById('name').value = name;
