@@ -237,7 +237,7 @@
 </div>
 
 <script>
-    // Railway Backend URL එක මෙතන Global Variable එකක් විදියට දාලා තියෙනවා
+    // Railway Backend URL එක මෙතන හරියටම සෙට් කරලා තියෙන්නේ
     const API_BASE_URL = 'https://student-system-backend-production.up.railway.app';
 
     // Toast Notification function eka
@@ -264,15 +264,15 @@
             students.forEach(student => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                        <td>#${student.id}</td>
-                        <td>${student.name}</td>
-                        <td>${student.age}</td>
-                        <td>${student.grade}</td>
-                        <td>
-                            <button class="action-btn edit-btn" onclick="editStudent(${student.id}, '${student.name}', ${student.age}, '${student.grade}')">Edit</button>
-                            <button class="action-btn delete-btn" onclick="deleteStudent(${student.id})">Delete</button>
-                        </td>
-                    `;
+                    <td>#${student.id}</td>
+                    <td>${student.name}</td>
+                    <td>${student.age}</td>
+                    <td>${student.grade}</td>
+                    <td>
+                        <button class="action-btn edit-btn" onclick="editStudent(${student.id}, '${student.name}', ${student.age}, '${student.grade}')">Edit</button>
+                        <button class="action-btn delete-btn" onclick="deleteStudent(${student.id})">Delete</button>
+                    </td>
+                `;
                 tbody.appendChild(row);
             });
         } catch (error) {
@@ -322,9 +322,8 @@
         }
     });
 
-    // UPDATE: Edit button eka obuwama form ekata data tika genna
+    // UPDATE: Edit button eka obuwama form ekata data tika genna (Bug එක හැදුවා)
     function editStudent(id, name, age, grade) {
-        document.getElementById('studentId.value', id); // Fix
         document.getElementById('studentId').value = id;
         document.getElementById('name').value = name;
         document.getElementById('age').value = age;
